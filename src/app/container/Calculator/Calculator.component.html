@@ -1,0 +1,22 @@
+<div class = 'container'>
+    <div class= 'input-container'>
+         <span><input 
+            type="text" 
+            placeholder = '0' 
+            #calulator 
+            [(ngModel)]="calc"
+            pattern="[0-9]"
+            autofocus/>
+           </span>
+        <span class='edit' (click) = "edit()">X</span>
+            
+    </div>
+    <div class= 'keypad'>
+        <div class = 'key' 
+        *ngFor = 'let key of buttons; let i = index'
+        (click) = "keyHandler(key)"
+         >
+            {{key}}
+        </div>
+    </div>
+</div>

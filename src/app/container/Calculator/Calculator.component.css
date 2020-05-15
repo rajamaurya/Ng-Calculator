@@ -1,0 +1,45 @@
+.container{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: #101924;
+    border: 1px solid grey;
+    box-shadow: 4px 0 10px 0 #ababab;
+}
+.keypad{
+    display: inline-block;
+    width: 100%;
+    margin: 5px;
+}
+.key{
+    border: 1px solid white;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px 0 #ababab;
+}
+.input-container input{
+    width: 90%;
+    height: 60px;
+    background-color:#101924 ;
+    border:none;
+    display: inline-block;
+}
+.edit{
+    color:white;
+    border:1px solid #ababab;
+}
+.keypad .key{
+   display: inline-flex;
+   /* flex-direction: column;
+   flex-flow: column; */
+   padding: 40px;
+   margin: 4px;
+
+   
+}
+.key:hover{
+    cursor: pointer;
+    border: 1px solid grey;
+}
