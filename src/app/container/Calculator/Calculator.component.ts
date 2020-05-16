@@ -127,13 +127,21 @@ export class CalculatorComponent implements OnInit {
                         ans = ((+leftElm['left']) + (+rightElm)).toString();
                       } 
                       break;
-            case '-': ans = ((+leftElm['left']) - (+rightElm)).toString(); break;
+            case '-': if(leftElm['left'] == ''){
+                        console.log("left one: ", (+leftElm['left']))
+                      }else if(leftElm['left'].includes('-')){
+                        console.log("left one: ", (+leftElm['left']))
+                       // ans = ((+leftElm['left']) + (+rightElm)).toString();
+                      }else{
+                        ans = ((+leftElm['left']) - (+rightElm)).toString();
+                      }
+                       break;
             default: return;
          }
         
         input  = [...input, ans];
         let check = [];
-        check.push(leftElm['op'],ans);
+        ans.includes('-')?check.push(ans):check.push(leftElm['op'],ans);
         
         resultantArr.splice(leftElm['indx'],count+2,...check);
     }
